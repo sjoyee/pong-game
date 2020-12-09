@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+            .score {
+                font-family:sans-serif;
+                font-size:60px;
+                fill:white;
+            }
+            .gameover {
+                font-family:sans-serif;
+                font-size:50px;
+                fill:red;
+            }
+            .button {
+                line-height: 2.5;
+                padding: 0 20px;
+                font-size: medium;
+                text-align: center;
+                color: white;
+                border-radius: 20px;
+                background-color: darkred;
+            }
+            .hidden {
+                visibility: hidden;
+            }
+
+        </style>
+        <script src="./dist/pong.js"></script>
+    </head>
+    <body>
+        <h1>Pong</h1>
+        <svg id="canvas" width="600" height="600">
+            <line id="dashedLine" x1="300" y1="30" x2="300" y2="570" stroke="white" stroke-width="5" stroke-dasharray="13"/>
+            <text id="leftScore" x="130" y="80" class="score"/>
+            <text id="rightScore" x="440" y="80" class="score"/>
+            <text id="endMessage" x="100" y="300" class="gameover"/>
+        </svg>
+        <div id="startButton">
+            <button class="button" type="button">Start Game</button> 
+        </div>
+        <div>
+            <p>Click the red button above to start the pong game! 
+                Move your mouse cursor up and down over the black canvas to move the paddle.
+                Hit the ball towards your opponent's wall. 
+                Game ends when either player reaches 7 points. All the best! 
+                Note: You can restart the game by clicking on the red button again when game ends.</p>
+        </div>
+    </body>
+</html>
